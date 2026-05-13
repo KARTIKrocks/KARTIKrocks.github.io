@@ -11,11 +11,13 @@ export default function Contact() {
         Have a project in mind, a question, or just want to say hi? My inbox is open.
       </p>
       <ul className={styles.links}>
-        <li>
-          <a href={`mailto:${site.email}`} className={styles.link}>
-            Email
-          </a>
-        </li>
+        {site.email !== undefined && (
+          <li>
+            <a href={`mailto:${site.email}`} className={styles.link}>
+              Email
+            </a>
+          </li>
+        )}
         {site.socials.map((s) => (
           <li key={s.label}>
             <a

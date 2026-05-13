@@ -1,10 +1,10 @@
 .heading {
-  font-size: 2rem;
+  font-size: 2.05rem;
 }
 
 .subheading {
   color: var(--fg-muted);
-  margin-block-end: 2rem;
+  margin-block-end: 2.25rem;
 }
 
 .timeline {
@@ -16,8 +16,10 @@
 .role {
   background: var(--bg-elev);
   border: 1px solid var(--border);
+  border-block-start-color: color-mix(in oklab, var(--accent) 45%, var(--border));
   border-radius: var(--radius);
-  padding: 1.25rem 1.4rem;
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .header {
@@ -30,7 +32,7 @@
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   margin: 0;
   font-weight: 600;
 }
@@ -42,6 +44,12 @@
 
 .company {
   color: var(--accent);
+  font-weight: 600;
+
+  &:hover {
+    color: var(--accent-2);
+    text-decoration: none;
+  }
 }
 
 .period {
@@ -56,6 +64,7 @@
   padding-inline-start: 1.1rem;
   color: var(--fg-muted);
   font-size: 0.95rem;
+  max-inline-size: 58rem;
 
   & li + li {
     margin-block-start: 0.35rem;
@@ -73,7 +82,7 @@
   & li {
     font-size: 0.75rem;
     padding: 0.2rem 0.55rem;
-    border-radius: 999px;
+    border-radius: 6px;
     background: var(--tint-accent);
     color: var(--accent);
     border: 1px solid var(--tint-accent-border);

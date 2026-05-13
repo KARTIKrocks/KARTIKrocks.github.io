@@ -1,10 +1,10 @@
 .heading {
-  font-size: 2rem;
+  font-size: 2.05rem;
 }
 
 .subheading {
   color: var(--fg-muted);
-  margin-block-end: 2rem;
+  margin-block-end: 2.25rem;
 }
 
 .grid {
@@ -16,11 +16,13 @@
 .card {
   background: var(--bg-elev);
   border: 1px solid var(--border);
+  border-block-start-color: color-mix(in oklab, var(--accent-2) 36%, var(--border));
   border-radius: var(--radius);
-  padding: 1.1rem 1.25rem;
+  padding: 1.2rem 1.3rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .cardLink {

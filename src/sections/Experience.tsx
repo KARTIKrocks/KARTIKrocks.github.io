@@ -3,12 +3,26 @@ import type { ExperienceRole } from '../types'
 import styles from './Experience.module.css'
 
 function Role({ role }: { readonly role: ExperienceRole }) {
+  const company =
+    role.companyUrl === undefined ? (
+      <span className={styles.company}>{role.company}</span>
+    ) : (
+      <a
+        href={role.companyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.company}
+        aria-label={`${role.company} website`}
+      >
+        {role.company}
+      </a>
+    )
+
   return (
     <article className={styles.role}>
       <header className={styles.header}>
         <h3 className={styles.title}>
-          {role.title} <span className={styles.at}>·</span>{' '}
-          <span className={styles.company}>{role.company}</span>
+          {role.title} <span className={styles.at}>·</span> {company}
         </h3>
         <p className={styles.period}>{role.period}</p>
       </header>

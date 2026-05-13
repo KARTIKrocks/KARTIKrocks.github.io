@@ -1,11 +1,11 @@
 .heading {
-  font-size: 2rem;
+  font-size: 2.05rem;
 }
 
 .subheading {
   color: var(--fg-muted);
   max-inline-size: 38rem;
-  margin-block-end: 1.5rem;
+  margin-block-end: 1.75rem;
 }
 
 .links {
@@ -25,6 +25,7 @@
   background: var(--bg-elev);
   color: var(--fg);
   font-size: 0.95rem;
+  font-weight: 600;
   transition:
     border-color 0.15s ease,
     transform 0.15s ease;

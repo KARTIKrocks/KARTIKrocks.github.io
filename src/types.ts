@@ -17,8 +17,14 @@ export interface SocialLink {
   readonly external: boolean
 }
 
+export interface Highlight {
+  readonly value: string
+  readonly label: string
+}
+
 export interface ExperienceRole {
   readonly company: string
+  readonly companyUrl?: string
   readonly title: string
   readonly period: string
   readonly highlights: readonly string[]
@@ -38,6 +44,7 @@ export interface SiteConfig {
   readonly tagline: string
   readonly bio: string
   readonly email?: string
+  readonly highlights: readonly Highlight[]
   readonly socials: readonly SocialLink[]
   readonly experience: readonly ExperienceRole[]
   readonly projects: readonly Project[]

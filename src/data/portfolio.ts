@@ -3,8 +3,13 @@ import type { SiteConfig } from '../types'
 export const site: SiteConfig = {
   name: 'Kartik Rajput',
   role: 'Software Engineer',
-  tagline: 'Distributed systems, observability, and Web3 infrastructure.',
-  bio: "I'm a software engineer based in Vadodara, India, building backends in Go and TypeScript. Most recently at Nurdsoft and Middleware (YC-23), where I worked on cloud observability, synthetic monitoring, and large-scale ingestion pipelines. Before that, I spent two years at Tntra building Hyperledger Fabric and Besu-based blockchain systems. On the side, I maintain a handful of open-source Go libraries.",
+  tagline: 'Go backends, distributed systems, observability, and Web3 infrastructure.',
+  bio: "I'm a software engineer based in Vadodara, India, building reliable backend systems in Go and TypeScript. Most recently at Nurdsoft and Middleware (YC-23), I worked on cloud observability, synthetic monitoring, health checks, and ingestion pipelines. Previously at Tntra, I built Hyperledger Fabric and Besu-based blockchain systems. I also maintain open-source Go libraries on the side.",
+  highlights: [
+    { value: '3+ yrs', label: 'Backend and infrastructure engineering' },
+    { value: 'YC-23', label: 'Observability product experience' },
+    { value: 'CKAD', label: 'Kubernetes certified' },
+  ],
   socials: [
     { label: 'GitHub', href: 'https://github.com/KARTIKrocks', external: true },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rajputkartik/', external: true },
@@ -15,9 +20,9 @@ export const site: SiteConfig = {
       title: 'Software Engineer',
       period: 'Jun 2025 – Current',
       highlights: [
-        'Bookstore.ai — designed a scalable image-processing pipeline generating multi-resolution book images for mobile clients.',
-        'Bookstore.ai — built a distributed microservice health-monitoring system tracking uptime, latency, and faults.',
-        'Fajardo Trucking — integrated QuickBooks APIs to automate invoicing; added extensive unit tests across service modules.',
+        'Designed an image-processing pipeline that generates multi-resolution book assets for mobile clients.',
+        'Built distributed health monitoring for microservices across uptime, latency, and fault signals.',
+        'Integrated QuickBooks APIs to automate invoicing and added focused unit coverage across service modules.',
       ],
       tech: [
         'Go',
@@ -32,23 +37,25 @@ export const site: SiteConfig = {
     },
     {
       company: 'Middleware (YC-23)',
+      companyUrl: 'https://middleware.io/',
       title: 'Software Engineer',
       period: 'Jun 2024 – May 2025',
       highlights: [
-        'Designed a highly scalable heartbeat-monitoring system enabling enterprise-grade service-uptime analytics.',
+        'Designed heartbeat monitoring for enterprise-grade uptime analytics.',
         'Implemented low-latency ingestion pipelines feeding real-time health dashboards.',
-        'Maintained the Synthetics module and Synthetic Agent — drove reliability, performance, and stable releases.',
+        'Maintained the Synthetics module and Synthetic Agent with a focus on reliability, performance, and release stability.',
       ],
       tech: ['Go', 'React', 'PostgreSQL', 'Pulsar', 'ClickHouse', 'Docker', 'Kubernetes'],
     },
     {
       company: 'Tntra',
+      companyUrl: 'https://www.tntra.io/',
       title: 'Software Engineer',
       period: 'Aug 2022 – May 2024',
       highlights: [
-        'Reward Point System — built a Hyperledger Fabric network with smart contracts for a consortium of partner institutions.',
-        'CBDC System — developed Solidity smart contracts on Hyperledger Besu enabling ERC-20-based token issuance and settlement.',
-        'Integrated full observability (Prometheus + Grafana) across both platforms.',
+        'Built a Hyperledger Fabric reward-points network for a consortium of partner institutions.',
+        'Developed Solidity smart contracts on Hyperledger Besu for ERC-20 token issuance and settlement.',
+        'Integrated Prometheus and Grafana observability across blockchain platforms.',
       ],
       tech: [
         'Go',
@@ -65,6 +72,7 @@ export const site: SiteConfig = {
     },
     {
       company: 'Tntra',
+      companyUrl: 'https://www.tntra.io/',
       title: 'Software Engineer Intern',
       period: 'May 2022 – Aug 2022',
       highlights: [
@@ -78,7 +86,7 @@ export const site: SiteConfig = {
     {
       title: 'Chess Opening Practice',
       description:
-        'A platform helping chess students practice structured opening lines assigned by a 2300-rated AGM coach. Built solo end-to-end.',
+        'A freelance project for a 2300-rated AGM coach, helping chess students practice assigned opening lines. Built solo end-to-end.',
       tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Docker'],
       liveUrl: 'https://app.mychesslearning.com',
     },

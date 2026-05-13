@@ -2,16 +2,17 @@
 
 @layer tokens {
   :root {
-    --bg: oklch(17% 0.012 270);
-    --bg-elev: oklch(22% 0.015 270);
-    --fg: oklch(92% 0.01 270);
-    --fg-muted: oklch(70% 0.02 270);
-    --accent: oklch(72% 0.14 265);
-    --accent-2: oklch(82% 0.13 175);
-    --border: oklch(28% 0.015 270);
+    --bg: oklch(16% 0.006 250);
+    --bg-elev: oklch(20.5% 0.008 250);
+    --fg: oklch(94% 0.006 250);
+    --fg-muted: oklch(72% 0.012 250);
+    --accent: oklch(75% 0.13 205);
+    --accent-2: oklch(79% 0.12 155);
+    --border: oklch(29% 0.009 250);
 
-    --radius: 12px;
-    --max-w: 960px;
+    --radius: 10px;
+    --max-w: 1040px;
+    --shadow-soft: 0 16px 40px color-mix(in oklab, black 24%, transparent);
 
     --tint-accent: color-mix(in oklab, var(--accent) 12%, transparent);
     --tint-accent-border: color-mix(in oklab, var(--accent) 28%, transparent);
@@ -55,18 +56,7 @@
 @layer base {
   body {
     min-block-size: 100dvb;
-    background:
-      radial-gradient(
-        1200px 600px at 80% -10%,
-        color-mix(in oklab, var(--accent) 12%, transparent),
-        transparent 60%
-      ),
-      radial-gradient(
-        900px 500px at -10% 20%,
-        color-mix(in oklab, var(--accent-2) 8%, transparent),
-        transparent 60%
-      ),
-      var(--bg);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--bg) 86%, white), var(--bg) 22rem);
   }
 
   a {
@@ -89,7 +79,7 @@
   h3 {
     margin-block: 0 0.5em;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     color: var(--fg);
     text-wrap: balance;
   }
