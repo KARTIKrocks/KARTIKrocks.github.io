@@ -13,7 +13,7 @@ export const site: SiteConfig = {
     {
       company: 'Nurdsoft',
       title: 'Software Engineer',
-      period: 'Jun 2025 – Nov 2025',
+      period: 'Jun 2025 – Current',
       highlights: [
         'Bookstore.ai — designed a scalable image-processing pipeline generating multi-resolution book images for mobile clients.',
         'Bookstore.ai — built a distributed microservice health-monitoring system tracking uptime, latency, and faults.',
