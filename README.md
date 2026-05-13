@@ -23,16 +23,16 @@ npm run dev        # http://localhost:5173
 
 ## Scripts
 
-| Script               | What it does                                    |
-| -------------------- | ----------------------------------------------- |
-| `npm run dev`        | Start Vite dev server with HMR                  |
-| `npm run build`      | Type-check then build production bundle (dist/) |
-| `npm run preview`    | Serve the production build locally              |
-| `npm run typecheck`  | Run `tsc -b --noEmit`                           |
-| `npm run lint`      | Run ESLint (type-checked rules)                 |
-| `npm run lint:fix`  | Auto-fix lint issues                            |
-| `npm run format`    | Format the whole repo with Prettier             |
-| `npm run format:check` | Check formatting without writing             |
+| Script                 | What it does                                    |
+| ---------------------- | ----------------------------------------------- |
+| `npm run dev`          | Start Vite dev server with HMR                  |
+| `npm run build`        | Type-check then build production bundle (dist/) |
+| `npm run preview`      | Serve the production build locally              |
+| `npm run typecheck`    | Run `tsc -b --noEmit`                           |
+| `npm run lint`         | Run ESLint (type-checked rules)                 |
+| `npm run lint:fix`     | Auto-fix lint issues                            |
+| `npm run format`       | Format the whole repo with Prettier             |
+| `npm run format:check` | Check formatting without writing                |
 
 ## Git hooks
 
@@ -73,16 +73,3 @@ there.
 - **SEO** — title, description, Open Graph, and Twitter card meta in
   `index.html`.
 - **Error boundary** — wraps the main content tree.
-
-## Deployment (GitHub Pages)
-
-This repo deploys as a **root user site** at
-**https://kartikrocks.github.io/**.
-
-1. Push this project to the `main` branch of the repo named
-   `KARTIKrocks.github.io`.
-2. In the repo settings → **Pages**, set **Source** to **GitHub Actions**.
-3. Every push to `main` runs `.github/workflows/deploy.yml` which lints,
-   type-checks, format-checks, builds, and publishes `dist/`.
-
-Because it's a root site, no `base` path is needed in `vite.config.ts`.
