@@ -31,4 +31,5 @@ function securityMetaPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [react(), securityMetaPlugin()],
+  base: '/',
 })
