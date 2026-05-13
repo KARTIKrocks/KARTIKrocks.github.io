@@ -1,0 +1,104 @@
+.hero {
+  padding-block-start: 5rem;
+}
+
+.eyebrow {
+  color: var(--fg-muted);
+  font-size: 1rem;
+  margin-block-end: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.name {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.title {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  margin-block-end: 1.5rem;
+}
+
+.titleMuted {
+  color: var(--fg-muted);
+}
+
+.accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bio {
+  max-inline-size: 38rem;
+  color: var(--fg-muted);
+  font-size: 1.05rem;
+}
+
+.bioAside {
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  margin-block: -0.5rem 0;
+  opacity: 0.8;
+}
+
+.cta {
+  display: flex;
+  gap: 0.75rem;
+  margin-block-start: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 2px;
+  }
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: var(--bg);
+
+  &:hover {
+    background: color-mix(in oklab, var(--accent) 90%, white);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+.btnGhost {
+  border: 1px solid var(--border);
+  color: var(--fg);
+
+  &:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btnPrimary,
+  .btnGhost {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
