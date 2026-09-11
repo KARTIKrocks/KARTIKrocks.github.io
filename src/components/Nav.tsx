@@ -2,11 +2,17 @@ import { useState } from 'react'
 import styles from './Nav.module.css'
 
 const LINKS = [
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#certifications', label: 'Certs' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#experience', label: 'Experience', external: false },
+  { href: '#projects', label: 'Projects', external: false },
+  { href: '#skills', label: 'Skills', external: false },
+  { href: '#certifications', label: 'Certs', external: false },
+  {
+    href: 'https://kartikrocks.github.io/wshub/blog',
+    label: 'Articles',
+    external: true,
+    ariaLabel: 'Articles — wshub blog (opens in a new tab)',
+  },
+  { href: '#contact', label: 'Contact', external: false },
 ] as const
 
 type Theme = 'light' | 'dark'
@@ -52,7 +58,13 @@ export default function Nav() {
           <ul className={styles.links}>
             {LINKS.map((l) => (
               <li key={l.href}>
-                <a href={l.href}>{l.label}</a>
+                <a
+                  href={l.href}
+                  aria-label={'ariaLabel' in l ? l.ariaLabel : undefined}
+                  {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>
